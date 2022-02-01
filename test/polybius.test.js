@@ -4,13 +4,11 @@ const polybiusModule = require("../src/polybius");
 
 describe("like foursquare, but high", () => {
   it("Should output a string after encoding", () => {
-    ///const expected =  "4432423352125413"
     const actual = polybiusModule.polybius("thinkful");
     expect(actual).to.be.a("string");
   });
 
   it("Should return exact number of characters (including spaces) in a string after decoding, otherwise return false", () => {
-    ///const expected = "4432423352125413"
     const actual = polybiusModule.polybius("thinkful");
     expect(actual).to.have.lengthOf(16);
   });
